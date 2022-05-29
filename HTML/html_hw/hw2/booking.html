@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+
+    <style>
+        img {
+            width: 20px;
+        }
+
+        input {
+            width: 125px;
+        }
+
+        .no {
+            width: 45px;
+            margin-inline-end: 15px;
+            height: 15px;
+        }
+
+        .cy {
+            width: 70px;
+            height: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        fieldset {
+            margin-top: 10px;
+            width: 350px;
+            font-weight: bold;
+        }
+
+        .search {
+            color: white;
+            background-color: orangered;
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        td {
+            background-color: rgb(29, 137, 245);
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        div {
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td style="background-color: rgb(233, 231, 231); color:black">
+                <img src="./pic/bf.png" alt="bf"> Book Flight
+            </td>
+            <td>
+                <img src="./pic/sc.png" alt="bf"> Schedule
+            </td>
+            <td>
+                <img src="./pic/tc.png" alt="bf"> Ticket
+            </td>
+            <td>
+                <img src="./pic/ht.png" alt="bf"> Hotel
+            </td>
+        </tr>
+    </table>
+    <fieldset>
+        <div>
+            <label for="Flying">Flying from </label>
+            <br><select name="Flying">
+                <option value="Pakist">Karachi, Pakist</option>
+                <option value="Thailand">Bangkok,Thailand</option>
+                <option value="England">London, England</option>
+                <option value="Japan">Tokyo, Japan</option>
+            </select>
+
+        </div>
+        <div style="margin-left: 20px;">
+            <label for="to">To </label>
+            <br><select name="to">
+                <option value="Pakist">Karachi, Pakist</option>
+                <option value="Thailand">Bangkok,Thailand</option>
+                <option value="England">London, England</option>
+                <option value="Japan">Tokyo, Japan</option>
+            </select>
+        </div>
+        <p></p>
+        <div>
+            <label for="departing">Departing</label>
+            <br><input type="date" name="departing">
+        </div>
+
+        </div>
+        <div style=" margin-left: 22px;">
+            <label for="returning">Returning</label>
+            <br><input type="date" name="returning">
+        </div>
+        <p></p>
+        <div>
+            <label for="adult"> Adult</label>
+            <br><input class="no" type="number" name="adult" value="0">
+        </div>
+
+        <div>
+            <label for="child"> Child</label>
+            <br><input class="no" type="number" name="child" value="0">
+        </div>
+        <div>
+            <label for="infant"> Infant</label>
+            <br><input class="no" type="number" name="infant" value="0">
+        </div>
+        <div>
+            <label style="color:red ;" for="currency"> <strong>Currency </strong></label>
+            <br><select class="cy" name="currency">
+                <option value="PKR">PKR</option>
+                <option value="THB">THB</option>
+                <option value="GBP">GBP</option>
+                <option value="YEN">YEN</option>
+            </select>
+        </div>
+    </fieldset>
+    <input class="search" type="button" name="search" value="SEARCH">
+
+</body>
+
+</html>
