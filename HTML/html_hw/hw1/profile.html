@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+<style>
+    body{
+        text-align: center;
+        background: linear-gradient(160deg, rgba(93, 143, 182, 0.564)50% , rgba(65, 97, 203, 0.564)50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .ava{
+        display: inline-block;
+        width: 400px;
+     
+    }
+    .text{
+        display: inline-block;
+        overflow: hidden;
+        width: 600px;
+        font-size: 26px;
+        text-align: left;
+        padding: 20px;
+        border: solid 1px;
+        border-radius: 50px;
+        border: none;
+        background-color: rgb(228, 224, 219);
+        font-family: cursive;
+    }
+    .skill,.hobby{
+        text-align: center;
+        margin-block: 20px;
+    }
+
+    .cook,.garden,.movie{
+        width: 100px;
+        margin-inline: 40px;
+    }
+    .sql,.python,.flutter{
+        margin-inline: 20px;
+    }
+    .Profile{
+        text-align: center;
+        font-size: 40px;
+        font-family: cursive;
+        display: inline;
+    }
+    button{
+            cursor: pointer; 
+            color :black; 
+            width: 150px; 
+            height: 50px; 
+            font-size: 24px;
+            border-radius: 10px; 
+            border: none;
+            font-family: cursive;
+            background: gainsboro
+        }
+   button:hover{
+            cursor: pointer; 
+            color :white; 
+            width: 150px; 
+            height: 50px; 
+            font-size: 24px;
+            border-radius: 10px; 
+            font-family: cursive;
+            background: rgb(5, 22, 37)
+        } 
+</style>
+</head>
+<body>
+    <div class="Profile">       
+    <h1>Profile</h1>
+    </div>
+    <div class="text">
+        <p>Name/Surname : Wipada Thanawattanawut</p>  
+        <p>Nickname : Nan </p> 
+        <p>Date of Birth : 09/11/1994</p>  
+        <p>Nationality : Thai</p> 
+        <p>Domicile : Bangkok </p>
+        <hr>
+        <p style="text-align: center;"> <strong> My Skills</strong> </p> 
+        <div class="skill">
+        <img class="sql" style="width:140px;margin-block: 8px;" src="./pic/SQL.png" alt="sql">
+        <img class="python" style="width:80px;" src= "./pic/PYTHON.png" alt="sql" width="50px">
+        <img class="flutter" style="width:170px; margin-block: 20px;"src="./pic/flutter.png" alt="sql" width="140px">
+        </div>
+        <hr>
+        <p style="text-align: center;"> <strong> My Hobby</strong> </p> 
+        <div class="hobby">
+        <img class="cook" src="./pic/cooking.png" alt="cook" >
+        <img class="garden"src="./pic/garden.png" alt="garden" >
+        <img class="movie" src="./pic/movies.png" alt="movie" >
+        </div>
+    </div>
+        <img class="ava"  src="./pic/avatar.png" alt="avatar" width="300px">
+        <div style="margin-top: 20px; margin-bottom: 50px;">
+            <a href="./index.html"> <button><strong> Home</strong></button></a>
+            <a href="./friends.html"> <button style="margin-left:100px ;"> <strong>Friends</strong></button></a>
+        </div>
+    
+</body>
+</html>
