@@ -42,3 +42,4 @@
             สร้าง ตัวหนา ตัวเอียง
             สร้าง <hr>
             สร้าง blockquotes
+        4. test git add file to repo
