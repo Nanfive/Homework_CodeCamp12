@@ -1,12 +1,9 @@
 f1 edit
 
-<<<<<<< HEAD
 edit_02
 
 edit_03_develop
 
 add something
-=======
 
 edit_04
->>>>>>> f1
