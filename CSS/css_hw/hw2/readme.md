@@ -1,0 +1,3 @@
+- Codecamp 12
+- Wipada Thanawattanawut
+- ให้สร้าง web page จาก style ที่กำหนด โดย ห้ามแก้ไข style ที่ให้ + ห้ามใส่ style ใน tag และ ตรึง 5 กล่องเล็กตรงกลาง ไม่เลื่อนตาม scroll bar

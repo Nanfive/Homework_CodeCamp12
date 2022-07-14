@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Homework3</title>
+    <style>
+        *{margin:0;padding: 0; box-sizing: border-box;}
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            height: 90vh;
+            display: flex;
+            background-color: #dddfe25f;
+        }
+        @media (max-width :900px){ 
+            main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container-fb{
+                align-items: center;
+            }
+            .container-reg{
+                align-items: center;
+                margin-left: 80px;
+            }
+            .sub-reg2{
+                margin-bottom: 100px;
+            }
+    
+
+    
+        }
+        .container-fb{
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container-fb > div{
+            margin: 0 0 0 100px;
+            text-align: center;
+            font-size: 30px;
+            text-align: left;
+        }
+        .container-reg{
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sub-reg1{
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            margin-left: 10px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        .sub-reg1 > div , input  {
+            font-size: 14px;
+            padding: 14px;
+            width: 380px;
+            margin: 10px 10px;
+        }
+        input[type=text],input[type=button]{
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+        }
+        .sub-reg2{
+            width: 400px;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 10px; 
+            font-size: 14px;
+        }
+        .sub-reg2 > div{
+            display: inline-block;
+          
+        }
+        footer{
+            height: 10vh;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 10px 10px;
+            font-size: 10px;
+            
+        }
+        ul > li {
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+            <div class="container-fb">
+                <div style="font-size: 50px; color: #1877f2; font-weight: 700;">
+                facebook
+                </div>
+                <div style="font-size: 25px;width: 400px;">
+                    Facebook helps you connect and share with the people in your life.</div>
+            </div>
+       
+       
+        <div class="container-reg">
+            <div class="sub-reg1">
+                <input type="text" name="email" placeholder="Email address or phone number">
+                <input type="text" name="pass" placeholder="Password">
+                <input type="button" value="Log In" style="background-color:#1877f2; border: none; color: white; font-weight: 700;margin: 5px 10px 0 10px; font-size: 20 px;">
+                <div class="a1" style="margin: 5px 0 5px 0; text-align: center;">
+                    <a style="text-decoration: none; font-size: 14px;" href="">Forgotten password?</a></div>
+                <div style="border-top:1px solid;width:350px;height: 10px; margin:0; padding: 0;"> </div>
+                <input type="button" value ="Create New Account" style="background-color: #42b72a;border: none; color: white; font-weight: 700;width: 200px;">
+            </div>
+            <div class="sub-reg2">
+                <div class="a2"><a href="" style="text-decoration: none;">
+                    Create a Page for</a></div>
+                <div>a celebrity, brand or business.</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>English(UK)</li>
+            <li>ภาษาไทย</li>
+            <li>日本語</li>
+            <li>中文(简体)</li>
+            <li>Tiếng Việt</li>
+            <li>Français (France)</li>
+            <li>Deutsch</li>
+            <li>Русский</li>
+            <li>Español</li>
+            <li>Português (Brasil)</li>
+            <li>aItaliano</li>
+            <li>aItaliano</li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
