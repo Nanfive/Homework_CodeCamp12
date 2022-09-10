@@ -112,16 +112,30 @@
 // }
 
 // ------------------------------------- State : re- render เฉพาะส่วนที่เปลี่ยนแปลง => ex. Counter --------------------------------------
-
+// update state ที่เป็น obj / array  ต้อง clone ก่อนเสมอ
 import { useState } from "react";
 import Counter from "./Counter";
 import Header from "./Header";
 function App() {
+  const [obj, setObj] = useState({
+    name: "John",
+  });
   return (
     <div>
       <Header />
       Hello React
       <Counter />
+      <button
+        onClick={() => {
+          const clone = { ...obj };
+          setObj((clone.name = "Jack"));
+          //   const clone = { ...obj };
+          //   setObj((clone.name = "Jack"));
+          //   console.log(clone);
+        }}
+      >
+        Click
+      </button>
     </div>
   );
 }

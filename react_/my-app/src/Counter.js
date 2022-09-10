@@ -7,8 +7,8 @@ function Counter() {
   // const countState = useState(0); // [0 , updateStateFunction]
   // destructuring => [count , setCount] ** state = action , function = set+action
   const [count, setCount] = useState(0);
-
   // 1 component มีได้หลาย state
+
   const [user, setUser] = useState("");
   const [cart, setCart] = useState([]);
 
@@ -24,6 +24,7 @@ function Counter() {
     setCount((curr) => curr + 1);
     // วิธีที่ 2 : callBackFunction  => setCount(function (currentStateValue) {return nextStateValue}); *ใช้วิธีที่ 2 ในกรณีต้องการอ้างอิงจากค่าปัจจุบัน
   };
+
   const handleDecrease = () => {
     setCount((curr) => {
       if (curr > 0) {
@@ -37,7 +38,8 @@ function Counter() {
       <button style={{ marginRight: "2rem" }} onClick={handleIncrease}>
         +
       </button>
-      {/* <button
+      {/* เขียนแบบแทรกเข้าไปเลย ไม่ได้ประกาศ function แล้วค่อย pass
+       <button
         style={{ marginRight: "2rem" }}
         onClick={() => setCount(count + 1)}
       >
