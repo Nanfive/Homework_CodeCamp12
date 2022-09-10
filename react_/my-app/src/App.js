@@ -1,5 +1,5 @@
-// CSS :
-// inline Style
+// --------------------------------------------CSS : ------------------------------------------
+// 1. inline Style
 // function App() {
 //   return (
 //     <div style={{ backgroundColor: "pink" }}>
@@ -10,8 +10,7 @@
 //     </div>
 //   );
 // }
-
-// กำหนดตัวแปร
+// 2. กำหนดตัวแปร
 // function App() {
 //   const style = {
 //     color: "white",
@@ -20,8 +19,9 @@
 //   return <div style={style}>Hello World!</div>;
 // }
 
-// Event
+// ------------------------------------------ Event ------------------------------------------
 
+// # การแทรก Event
 // แบบ 1
 // function App() {
 //   return (
@@ -34,7 +34,6 @@
 //     </button>
 //   );
 // }
-
 // แบบ 2
 // function App() {
 //   const handle = () => {
@@ -43,7 +42,7 @@
 //   return <button onClick={handle}> Click</button>; // ทุกครั้งที่มีการ click brwoser จะสร้าง event แล้ว pass เข้ามาเป็น parameter ของ function
 // }
 
-// Event Object
+// ## Event Object
 // แบบ 1
 // function App() {
 //   const handle = (event) => {
@@ -51,7 +50,6 @@
 //   };
 //   return <button onClick={handle}> Click</button>; // ทุกครั้งที่มีการ click brwoser จะสร้าง event แล้ว pass เข้ามาเป็น parameter ของ function
 // }
-
 // แบบ 2
 // function App() {
 //   return <button onClick={(event) => console.log(event)}> Click</button>;
@@ -71,15 +69,15 @@
 //   );
 // }
 
-// เรียกใช้ Parameter
+// # Event เรียกใช้ Parameter
 // function App() {
 //   const ano = (a, b) => {
 //     console.log(a + b);
-//   };
+//
 //   return <button onClick={() => ano(2, 8)}> click</button>;
 // }
 
-// preventDefault() ไม่ให้ทำงาน
+// # Envent preventDefault() ไม่ให้ทำงาน
 // function App() {
 //   return (
 //     <a
@@ -93,11 +91,39 @@
 //   );
 // }
 
-// function App() {
-//   return
+// -----------------------------------------Component  example  -----------------------------------------
+// function Comp(props) {
+//   return (
+//     <div>
+//       {props.titles} : {props.description}
+//     </div>
+//   );
 // }
 
 // function App() {
-//   return
+//   const titles = ["React", "Angular", "Vue"];
+//   return (
+//     <div>
+//       <Comp titles={titles[0]} description="Frontend Framework" />
+//       <Comp titles={titles[1]} />
+//       <Comp titles={titles[2]} />
+//     </div>
+//   );
 // }
+
+// ------------------------------------- State : re- render เฉพาะส่วนที่เปลี่ยนแปลง => ex. Counter --------------------------------------
+
+import { useState } from "react";
+import Counter from "./Counter";
+import Header from "./Header";
+function App() {
+  return (
+    <div>
+      <Header />
+      Hello React
+      <Counter />
+    </div>
+  );
+}
+
 export default App;
