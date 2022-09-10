@@ -120,6 +120,7 @@ function App() {
   const [obj, setObj] = useState({
     name: "John",
   });
+  const [input, setInput] = useState("");
   return (
     <div>
       <Header />
@@ -136,6 +137,14 @@ function App() {
       >
         Click
       </button>
+      <input
+        type="text"
+        placeholder="Enter"
+        value={input}
+        onChange={(event) => {
+          setInput(event.target.value);
+        }}
+      />
     </div>
   );
 }
