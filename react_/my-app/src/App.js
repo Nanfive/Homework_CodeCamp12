@@ -114,40 +114,71 @@
 // ------------------------------------- State : re- render เฉพาะส่วนที่เปลี่ยนแปลง => ex. Counter --------------------------------------
 // update state ที่เป็น obj / array  ต้อง clone ก่อนเสมอ
 import { useState } from "react";
-import Counter from "./Counter";
-import Header from "./Header";
+// import Counter from "./Counter";
+// import Header from "./Header";
+// function App() {
+//   const [obj, setObj] = useState({
+//     name: "John",
+//     age: 28,
+//     email: "test@gmail.com",
+//   });
+//   const [input, setInput] = useState("");
+//   return (
+//     <div>
+//       <Header />
+//       Hello React
+//       <Counter />
+//       <button
+//         onClick={() => {
+//           const clone = { ...obj };
+//           clone.name = "Jack";
+//           setInput(clone);
+//           console.log(clone);
+//         }}
+//       >
+//         Click
+//       </button>
+//       <input
+//         type="text"
+//         placeholder="Enter"
+//         value={input}
+//         onChange={(event) => {
+//           setInput(event.target.value);
+//         }}
+//       />
+//     </div>
+//   );
+// }
+//----------------------------------- List and Key ต้องอยู่ที่ root component ของสิ่งที่เรา return จาก function map  ---------------------------------------------------//
+
 function App() {
-  const [obj, setObj] = useState({
-    name: "John",
-    age: 28,
-    email: "test@gmail.com",
-  });
-  const [input, setInput] = useState("");
+  const [friend, setFriend] = useState(["Peter", "Hasan", "Michael", "John"]);
   return (
     <div>
-      <Header />
-      Hello React
-      <Counter />
-      <button
-        onClick={() => {
-          const clone = { ...obj };
-          clone.name = "Jack";
-          setInput(clone);
-          console.log(clone);
-        }}
-      >
-        Click
-      </button>
-      <input
-        type="text"
-        placeholder="Enter"
-        value={input}
-        onChange={(event) => {
-          setInput(event.target.value);
-        }}
-      />
+      {friend.map((el, index) => (
+        <div key={index}>{el}</div>
+      ))}
+
+      {/* <Card name="Peter" />
+      <Card name="Hasan" /> */}
+      {friend.map((el, index) => (
+        <div key={index}>
+          <p> My Friend</p>
+          <Card name={el} />
+        </div>
+      ))}
     </div>
   );
 }
 
+function Card(props) {
+  return (
+    <div style={{ border: "1px solid green", width: "100px" }}>
+      {" "}
+      {props.name}
+    </div>
+  );
+}
 export default App;
+
+// fri
