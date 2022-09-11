@@ -180,5 +180,3 @@ function Card(props) {
   );
 }
 export default App;
-
-// fri
