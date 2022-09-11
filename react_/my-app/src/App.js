@@ -119,6 +119,8 @@ import Header from "./Header";
 function App() {
   const [obj, setObj] = useState({
     name: "John",
+    age: 28,
+    email: "test@gmail.com",
   });
   const [input, setInput] = useState("");
   return (
@@ -129,10 +131,9 @@ function App() {
       <button
         onClick={() => {
           const clone = { ...obj };
-          setObj((clone.name = "Jack"));
-          //   const clone = { ...obj };
-          //   setObj((clone.name = "Jack"));
-          //   console.log(clone);
+          clone.name = "Jack";
+          setInput(clone);
+          console.log(clone);
         }}
       >
         Click
